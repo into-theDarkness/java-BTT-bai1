@@ -1,6 +1,9 @@
 package tranminhduc.pro.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -38,8 +41,8 @@ public class MaterialController {
 
     }
     @GetMapping("/materials")
-    public ModelAndView listMaterials(){
-        Iterable<Material> materials = materialService.findAll();
+    public ModelAndView listMaterials(@PageableDefault(size = 5) Pageable pageable){
+        Page<Material> materials = materialService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("material/list");
         modelAndView.addObject("materials", materials);
         return modelAndView;
@@ -49,7 +52,7 @@ public class MaterialController {
         Material material = materialService.findById(id);
         if(material != null){
             ModelAndView modelAndView = new ModelAndView("material/edit");
-            modelAndView.addObject("materials", material);
+            modelAndView.addObject("material", material);
             return modelAndView;
         }else {
             ModelAndView modelAndView = new ModelAndView("error");

@@ -10,7 +10,7 @@ public class Material {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private Date importDate;
+    private java.sql.Date importDate;
     private String description;
     private Float price;
     private Integer quantity;
@@ -20,7 +20,7 @@ public class Material {
     public Material(){
 
     }
-    public Material(Long id,String name, Date importDate, String description, Float price, Integer quantity, String image, Supplier supplier){
+    public Material(Long id, String name, java.sql.Date importDate, String description, Float price, Integer quantity, String image, Supplier supplier){
 
     }
 
@@ -45,7 +45,7 @@ public class Material {
         return importDate;
     }
 
-    public void setImportDate(Date importDate) {
+    public void setImportDate(java.sql.Date importDate) {
         this.importDate = importDate;
     }
 

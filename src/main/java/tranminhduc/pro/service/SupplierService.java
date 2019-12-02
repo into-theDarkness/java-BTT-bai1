@@ -7,4 +7,5 @@ public interface SupplierService {
     Supplier findById(Long id);
     void save(Supplier supplier);
     void remove (Long id);
+
 }

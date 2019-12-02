@@ -6,6 +6,11 @@
 </head>
 <body>
 <a href="/create-material">Create new material</a>
+<div>
+    <a th:href="@{'/materials'(page=${materials.number - 1})}" th:if="${materials.hasPrevious()}">Previous</a>
+    <span th:text="${materials.number + 1}"></span>/<span th:text="${materials.totalPages}"></span>
+    <a th:href="@{'/materials'(page=${materials.number + 1})}" th:if="${materials.hasNext()}">Next</a>
+</div>
 <h1>Materials</h1>
 <table border="1">
     <tr>
@@ -16,6 +21,7 @@
         <th>Price</th>
         <th>Quantity</th>
         <th>Image</th>
+        <th>Supplier</th>
     </tr>
     <th:block th:each="material : ${materials}">
         <tr>
@@ -25,7 +31,7 @@
             <td th:text="${material.description}"></td>
             <td th:text="${material.price}"></td>
             <td th:text="${material.quantity}"></td>
-            <td th:text ="${material.image}"></td>
+            <td><img th:src="${material.image}" width="230" height="230"></td>
             <td th:text="${material.supplier.name}"></td>
             <td><a th:href="@{/edit-material/__${material.id}__ }">Edit</a></td>
             <td><a th:href="@{/delete-material/__${material.id}__ }">Delete</a></td>

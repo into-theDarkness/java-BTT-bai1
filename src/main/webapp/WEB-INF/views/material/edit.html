@@ -21,7 +21,7 @@
         </tr>
         <tr>
             <td>importDate</td>
-            <td><input type="text" th:field="*{importDate}"/></td>
+            <td><input type="date" th:field="*{importDate}"/></td>
         </tr>
         <tr>
             <td>Description</td>
@@ -43,13 +43,8 @@
         <tr>
             <td>Supplier:</td>
             <td>
-                <select name="supplier">
-                    <option th:each="p : ${suppliers}"
-                            th:value="${p.sup_id}"
-                            th:text="${p.name}"
-                            th:text="${p.description}"
-                            th:text="${p.address}"
-                            th:selected="(${p.sup_id} == *{supplier.sup_id})"></option>
+                <select th:field="*{supplier}">
+                    <option th:each="s : ${suppliers}" th:value="${s.sup_id}" th:text="${s.name}"></option>
                 </select>
             </td>
         </tr>

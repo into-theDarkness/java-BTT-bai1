@@ -41,7 +41,7 @@
         <tr>
             <td>Supplier:</td>
             <td>
-                <select th:field="${suppliers}">
+                <select th:field="*{supplier}">
                     <option th:each="s : ${suppliers}" th:value="${s.sup_id}" th:text="${s.name}"></option>
                 </select>
             </td>

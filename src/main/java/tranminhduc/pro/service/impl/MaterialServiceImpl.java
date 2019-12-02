@@ -1,18 +1,20 @@
 package tranminhduc.pro.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import tranminhduc.pro.model.Material;
 import tranminhduc.pro.model.Supplier;
 import tranminhduc.pro.repository.MaterialRepository;
 import tranminhduc.pro.service.MaterialService;
 
-public class MaterialServiceImpl implements MaterialService {
+public class    MaterialServiceImpl implements MaterialService {
     @Autowired
     private MaterialRepository materialRepository;
 
     @Override
-    public Iterable<Material> findAll() {
-        return materialRepository.findAll();
+    public Page<Material> findAll(Pageable pageable) {
+        return materialRepository.findAll(pageable);
     }
 
     @Override
