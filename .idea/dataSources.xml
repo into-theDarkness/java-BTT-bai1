@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@localhost" uuid="183eb7ed-9555-4293-adf7-e6cd6ef14ed7">
+    <data-source source="LOCAL" name="BTTB1@localhost [2]" uuid="183eb7ed-9555-4293-adf7-e6cd6ef14ed7">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/BTTB1?useUnicode=yes&amp;characterEncoding=UTF-8</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="BTTB1@localhost" uuid="f11237d1-d873-484b-9298-6cf86d71b260">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/BTTB1</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="baitapchiChaubai1@localhost" uuid="85cda97c-0391-49a2-ab1c-d7688937c901">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/baitapchiChaubai1</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="@localhost" uuid="ac4e409a-ca17-4fb1-b3c5-5ff03cf7cd17">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
     </data-source>
   </component>
 </project>

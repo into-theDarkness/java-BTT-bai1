@@ -1,18 +1,30 @@
 package tranminhduc.pro.model;
 
-import javax.persistence.*;
-import java.util.Date;
+import org.springframework.validation.annotation.Validated;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+import java.util.Date;
+@Validated
 @Entity
 @Table(name = "materials")
 public class Material {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    //@NotEmpty
+    //@Size(max = 50, min = 2)
     private String name;
     private java.sql.Date importDate;
+    //@NotEmpty
+    //@Size(min = 2, max = 1000)
     private String description;
+    //@NotEmpty
+    //@Size(min =2, max =100)
     private Float price;
+    //@NotEmpty
+    //@Size(min=2, max =10000)
     private Integer quantity;
     private String image;
     @ManyToOne

@@ -23,7 +23,7 @@
             <td th:text="${material.importDate}"></td>
             <td th:text="${material.description}"></td>
             <td th:text="${material.quantity}"></td>
-            <td th:text="${material.image}"></td>
+            <td><img th:src="${material.image}" width="230" height="230"></td>
         </tr>
     </th:block>
 </table>
